@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diseño.css">
+    <title>Proyecto3</title>
+</head>
+<body>
+    <div class="container">
+          <div id="pregunta" >Question</div>
+          <button onclick="next_quest1()" >Start</button>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn"  onclick="puntos1()"  id="1">Answer 1</button>
+            <button class="btn"  onclick="puntos2()"  id="2">Answer 2</button>
+            <button class="btn"  onclick="puntos3()"  id="3">Answer 3</button>
+            <button class="btn"  onclick="puntos4()"  id="4">Answer 4</button>
+          </div>
+          <button onclick="next_quest2()">Next</button>
+          <div id="demo"></div>
+          <button onclick="puntos1()" >clicame</button>
+    </div>
+<script>
+  var i = 0;
+  var pregunta = "";
+  var boton1 = "";
+  var boton2 = "";
+  var boton3 = "";
+  var boton4 = "";
+  var doc;
+  var a = 0;
+function next_quest1(){
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+   doc = this.responseXML;
+   x = doc.getElementsByTagName("question")[i]; 
+   pregunta = x.getElementsByTagName("wording")[0].childNodes[0].nodeValue ;
+   document.getElementById("pregunta").innerHTML = pregunta ;
+    boton1 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[0].childNodes[0].nodeValue ;
+   document.getElementById("1").innerHTML = boton1 ;
+    boton2 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[1].childNodes[0].nodeValue ;
+   document.getElementById("2").innerHTML = boton2 ;
+    boton3 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[2].childNodes[0].nodeValue ;
+   document.getElementById("3").innerHTML = boton3 ;
+    boton4 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[3].childNodes[0].nodeValue ;
+   document.getElementById("4").innerHTML = boton4 ;
+}
+xhttp.open("GET", "bateria1.xml");
+xhttp.send();
+}
+
+function next_quest2(){
+  i++;
+  x = doc.getElementsByTagName("question")[i]; 
+   pregunta = x.getElementsByTagName("wording")[0].childNodes[0].nodeValue ;
+   document.getElementById("pregunta").innerHTML = pregunta ;
+    boton1 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[0].childNodes[0].nodeValue ;
+   document.getElementById("1").innerHTML = boton1 ;
+    boton2 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[1].childNodes[0].nodeValue ;
+   document.getElementById("2").innerHTML = boton2 ;
+    boton3 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[2].childNodes[0].nodeValue ;
+   document.getElementById("3").innerHTML = boton3 ;
+    boton4 = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[3].childNodes[0].nodeValue ;
+   document.getElementById("4").innerHTML = boton4 ;
+
+}
+function puntos1() {
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+  doc = this.responseXML;
+x = doc.getElementsByTagName("question")[i]; 
+correcto = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[0].attributes[0].Value;
+if ( correcto == "yes") {
+    a++;
+    document.getElementById('demo').textContent= a + "fallos";
+  }else {
+    a--;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  }
+  xhttp.open("GET", "bateria1.xml");
+xhttp.send();
+}
+
+
+function puntos2() {
+  const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+  doc = this.responseXML;
+x = doc.getElementsByTagName("question")[i]; 
+correcto = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[1].attributes[0].Value;
+if (correcto != "yes") {
+    a = a+1;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  else {
+    a = a-1;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  }
+  xhttp.open("GET", "bateria1.xml");
+xhttp.send();
+}
+function puntos3() {const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+  doc = this.responseXML;
+x = doc.getElementsByTagName("question")[i]; 
+correcto = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[1].attributes[0].Value;
+if (correcto != "yes") {
+    a = a+1;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  else {
+    a = a-1;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  }
+  xhttp.open("GET", "bateria1.xml");
+xhttp.send();
+}
+
+function puntos4() {
+  const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+  doc = this.responseXML;
+x = doc.getElementsByTagName("question")[i]; 
+correcto = x.getElementsByTagName("choices")[0].getElementsByTagName("choice")[1].attributes[0].Value;
+if (correcto != "yes") {
+    a = a+1;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  else {
+    a = a-1;
+    document.getElementById('demo').textContent= a + "fallos";
+  }
+  }
+  xhttp.open("GET", "bateria1.xml");
+xhttp.send();
+}
+</script>
+</body>
+</html>

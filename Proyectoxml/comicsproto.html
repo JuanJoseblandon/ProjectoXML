@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="diseño.css">
+  <title>Comics</title>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <h2 id="pregunta">question</h2>
+    </div>
+    <button class="btn" onclick="next_quest1()">Start</button>
+    <div id="answer-buttons" class="btn-grid">
+      <button class="btn" onclick="next_quest2();puntos1()" id="1">Answer 1</button>
+      <button class="btn" onclick="next_quest2();puntos2()" id="2">Answer 2</button>
+      <button class="btn" onclick="next_quest2();puntos3()" id="3">Answer 3</button>
+      <button class="btn" onclick="next_quest2();puntos4()" id="4">Answer 4</button>
+    </div>
+    <div class="controls">
+      <a href="Proyecto.html">
+        <button class="btn">Volver al menú</button>
+      </a>
+      <button class="btn" onclick="Restart()">Reiniciar</button>
+    </div>
+    <div>
+      <h2>Puntuación:<p id="demo">0</p>
+      </h2>
+    </div>
+  </div>
+</body>
+<script src="Proyecto.js"></script>
+</html>

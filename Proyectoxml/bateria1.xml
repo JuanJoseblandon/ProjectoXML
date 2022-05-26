@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!DOCTYPE test [
+<!ELEMENT test (question+)>
+<!ELEMENT question (wording,choices)>
+<!ELEMENT wording (#PCDATA)>
+<!ELEMENT choices (choice+)>
+<!ELEMENT choice (#PCDATA)>
+ 
+<!ATTLIST question id CDATA #REQUIRED>
+<!ATTLIST choice correct (yes| no) "no">
+]>
+<test>
+    <question id="q1">
+      <wording>cual de estos no es un personaje de MARVEL?</wording>
+        <choices>
+            <choice correct="yes">Flash</choice>
+            <choice correct="no">Ghost Rider</choice>
+            <choice correct="no">Starlord</choice>
+            <choice correct="no">QuickSilver</choice>
+        </choices>
+    </question>
+    <question id="q2">
+      <wording>Cual de estos personajes no es un heroe?</wording>
+        <choices>
+            <choice correct="no">Deadpool</choice>
+            <choice correct="no">Green Arrow</choice>
+            <choice correct="no">Falcon</choice>
+            <choice correct="no">Night Wind</choice>
+        </choices>
+    </question>
+    <question id="q3">
+      <wording>Encuentra al intruso</wording>
+        <choices>
+            <choice correct="yes">Luke cage</choice>
+            <choice correct="no">Tobie Maguire</choice>
+            <choice correct="no">Tom holland</choice>
+            <choice correct="no">Andrew Gardfield</choice>
+        </choices>
+    </question>
+    <question id="q4">
+      <wording>Qué simboliza el simbolo de superman?</wording>
+        <choices>
+            <choice correct="yes">Esperanza</choice>
+            <choice correct="no">Super</choice>
+            <choice correct="no">supra</choice>
+            <choice correct="no">Nada , es solo una S</choice>
+        </choices>
+    </question>
+    <question id="q5">
+      <wording>Quién es más fuerte?</wording>
+        <choices>
+            <choice correct="yes">Superman</choice>
+            <choice correct="no">Hiperion</choice>
+            <choice correct="no">Shazam</choice>
+            <choice correct="no">HULK</choice>
+        </choices>
+    </question>
+    <question id="q6">
+      <wording>Quien interpretó a eddy brock/venom en su pelicula?</wording>
+        <choices>
+            <choice correct="yes">Tom hardy</choice>
+            <choice correct="no">Tom hanks</choice>
+            <choice correct="no">Tom holland</choice>
+            <choice correct="no">Jason Momoa</choice>
+        </choices>
+    </question>
+    <question id="q7">
+      <wording>cuantos actores han interpretado el papel de HULK</wording>
+        <choices>
+            <choice correct="yes">4</choice>
+            <choice correct="no">3</choice>
+            <choice correct="no">1</choice>
+            <choice correct="no">2</choice>
+        </choices>
+    </question>
+    <question id="q8">
+      <wording>Quien mató a superman?</wording>
+        <choices>
+            <choice correct="yes">DoomsDay</choice>
+            <choice correct="no">Darkseid</choice>
+            <choice correct="no">Lex Luthor</choice>
+            <choice correct="no">Batman</choice>
+        </choices>
+    </question>
+    <question id="q9">
+      <wording>Como llaman los habitantes de Gotham a Batman</wording>
+        <choices>
+            <choice correct="yes">El caballero oscuro</choice>
+            <choice correct="no">El caballero negro</choice>
+            <choice correct="no">El señor de la noche</choice>
+            <choice correct="no">Venganza</choice>
+        </choices>
+    </question>
+    <question id="q10">
+      <wording>Cual fue el villano que le partió la columna a batman?</wording>
+        <choices>
+            <choice correct="yes">Bane</choice>
+            <choice correct="no">El espantapajaros</choice>
+            <choice correct="no">Enigma</choice>
+            <choice correct="no">2 caras</choice>
+        </choices>
+    </question>
+    <question id="q11">
+      <wording>En MARVEL existen 2 metales con el titulo de "el más duro de la tierra", el vibranium y ...</wording>
+        <choices>
+            <choice correct="yes">Adamantium</choice>
+            <choice correct="no">Inoptanio</choice>
+            <choice correct="no">Lauritanio</choice>
+            <choice correct="no">Wolframio</choice>
+        </choices>
+    </question>
+    <question id="q12">
+      <wording>Cúal fue la frase que dijo Tony antes de usar las gemas del infinito?</wording>
+        <choices>
+            <choice correct="yes">Yo soy ironman</choice>
+            <choice correct="no">Esto es por la tierra</choice>
+            <choice correct="no">Venganza</choice>
+            <choice correct="no">Se acabó</choice>
+        </choices>
+    </question>
+    <question id="q13">
+      <wording>Cuantas veces murio visión en Infinity War?</wording>
+        <choices>
+            <choice correct="yes">2</choice>
+            <choice correct="no">0</choice>
+            <choice correct="no">1</choice>
+            <choice correct="no">3</choice>
+        </choices>
+    </question>
+    <question id="q14">
+      <wording>De que color es el traje de superman en la liga de la justicia Snyder cut</wording>
+        <choices>
+            <choice correct="yes">Negro y plateado</choice>
+            <choice correct="no">Rojo y azúl</choice>
+            <choice correct="no">Blanco</choice>
+            <choice correct="no">Negro</choice>
+        </choices>
+    </question>
+    <question id="q15">
+      <wording>Quien gracias a quién revivío superman</wording>
+        <choices>
+            <choice correct="yes">Flash</choice>
+            <choice correct="no">Cyborg</choice>
+            <choice correct="no">Batman</choice>
+            <choice correct="no">Wonder Woman</choice>
+        </choices>
+    </question>
+    <question id="q16">
+      <wording>como se llaman los esbirros de stepenwolf?</wording>
+        <choices>
+            <choice correct="yes">Parademonios</choice>
+            <choice correct="no">drangonflies</choice>
+            <choice correct="no">cacodemonios</choice>
+            <choice correct="no">IMP's</choice>
+        </choices>
+    </question>
+    <question id="q17">
+      <wording>Como se llaman los objetos que busca stepenwolf?</wording>
+        <choices>
+            <choice correct="Yes">Cajas Madre</choice>
+            <choice correct="no">Cajas torque</choice>
+            <choice correct="no">Motores Morfogenicos</choice>
+            <choice correct="no">Gemas</choice>
+        </choices>
+    </question>
+    <question id="q18">
+      <wording>En las peliculas, Quien creo a DoomsDay?</wording>
+        <choices>
+            <choice correct="yes">Lex Luthor</choice>
+            <choice correct="no">El consejo de Kryton</choice>
+            <choice correct="no">El general Zod</choice>
+            <choice correct="no">Batman</choice>
+        </choices>
+    </question>
+    <question id="q19">
+      <wording>Porque no aparecen ni hulk ni Thor en Civil war?</wording>
+        <choices>
+            <choice correct="yes">Ambos estan en Sakard porque ocurre a la vez que Thor Ragnarok</choice>
+            <choice correct="no">Thor esta en Asgard y hulk tambien</choice>
+            <choice correct="no">Thor esta buscando a loki y Hulk esta desaparecido</choice>
+            <choice correct="no">Thor esta ocupado y hulk no quiere saber nada</choice>
+        </choices>
+    </question>
+    <question id="q20">
+      <wording>Como se llama el personaje que nunca falla un disparo en DC?</wording>
+        <choices>
+            <choice correct="yes">DeadShot</choice>
+            <choice correct="no">Deathstroke</choice>
+            <choice correct="no">BloodSport</choice>
+            <choice correct="no">Headshot</choice>
+        </choices>
+    </question>
+        <question id="q21">
+      <wording>Como se llama el personaje que nunca falla un disparo en DC?</wording>
+        <choices>
+            <choice correct="yes">DeadShot</choice>
+            <choice correct="no">Deathstroke</choice>
+            <choice correct="no">BloodSport</choice>
+            <choice correct="no">Headshot</choice>
+        </choices>
+    </question>
+</test>
